@@ -1,7 +1,7 @@
 import holoviews as hv
 import numpy as np
 import panel as pn
-import subprocess
+from bokeh.settings import settings
 
 import config
 from _util import (
@@ -10,6 +10,7 @@ from _util import (
     _download_dem,
 )
 
+settings.resources = 'cdn'
 hv.extension('bokeh')
 
 scalar = 100000
